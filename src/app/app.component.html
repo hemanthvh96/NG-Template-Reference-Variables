@@ -1,0 +1,23 @@
+<h3>Template Reference Variables</h3>
+
+<label style="margin-right: 46px">Email</label>
+<input type="email" (keyup)="(0)" #email />
+<p>
+  {{ email.value }}
+</p>
+
+<!-- Angular doesn't update the bindings unless some asynchronous events occur. Keystrokes are asynchronous events hence we have used keyup -->
+
+<br />
+
+<label style="margin-right: 20px">Username</label>
+<input
+  (keyup)="onKeyup(username)"
+  type="text"
+  #username
+  [id]="username.value"
+/>
+
+<p>{{ username.value }}</p>
+
+<p>Check the console</p>
